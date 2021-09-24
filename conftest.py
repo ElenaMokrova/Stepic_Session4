@@ -20,9 +20,9 @@ def browser(request):
     print("\nstart chrome browser for test..")
     options = Options()
     options.add_experimental_option('prefs', {'intl.accept_languages': language})
-    browser = webdriver.Chrome(options=options)
+    browser_launch = webdriver.Chrome(options=options)
 
     #closing browser
-    yield browser
+    yield browser_launch
     print("\nquit browser..")
-    browser.quit()
+    browser_launch.quit()
